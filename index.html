@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Mechineni Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="menu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p id="title">Java Full Stack Developer</p>
+            <h1>Hi, I'm Ajay <br>Mechineni</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Ajay.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Experienced Senior Java Full Stack Developer with 8+ years of expertise in high-performance web applications. Proficient in Java 11, Spring Boot, and microservices architecture, optimizing applications by 20%. Capable in AWS, GCP, Docker, Kubernetes, and Jenkins for seamless deployment. Verified history of accomplishments in RESTful API design and implementation. Effective leader, proficient at guiding cross-functional teams to on-time project delivery. Strong troubleshooting proficiency and an outcome-driven approach. </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>J2SE Technology</span><br>Multithreading, Reflection API, Collection API, Networking, Exception Handling</li>
+                        <li><span>Middleware Technology</span><br>JMS, MQ Messaging, Tibco, Active MQ, RabbitMQ</li>
+                        <li><span>J2EE Technology</span><br>Servlets, JSP, SOAP, REST, JDBC, JNDI</li>
+                        <li><span>J2EE Frameworks</span><br>Spring MVC, Struts, JSF</li>
+                        <li><span>Architecture & Framework</span><br>Spring Boot, Spring, Hibernate, Spring Cloud, Microservices, Monolithic</li>
+                        <li><span>Database</span><br>Oracle 10g, 11g, PostgreSQL, MySQL, MongoDB</li>
+                        <li><span>IDE</span><br>STS, Eclipse, My Eclipse, NetBeans, IntelliJ IDEA</li>
+                        <li><span>Operating Systems</span><br>Windows, Linux, UNIX, Mac</li>
+                        <li><span>Defect Tracking Tools</span><br>JIRA, HP ALM</li>
+                        <li><span>Web/App Servers</span><br>WebLogic, Web Sphere, Tomcat, JBoss, Apache</li>
+                        <li><span>Web Technologies</span><br>HTML5, XML, JavaScript, Node.js, Angular JS, jQuery, CSS3, Angular7+, JSP, AJAX, XSLT, XHTML, DHTML, React JS, Express JS</li>
+                        <li><span>Cloud Technologies</span><br>Azure, AWS</li>
+                        <li><span>Query Languages</span><br>SQL, PL/SQL</li>
+                        <li><span>Programming Language</span><br>C, C++, Java</li>
+                        <li><span>Script</span><br>PHP, Shell</li>
+                        <li><span>Design patterns</span><br>Front Controller, Factory, Singleton, Strategy</li>
+                        <li><span>Tools</span><br>Maven, Gradle, ANT, Log4J, JUnit, TOAD, Apache Camel, ESB, Cucumber, Microsoft Visio 10</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Nov 2022 - Present</span><br>Senior Java Full Stack Developer at CalSTRS.</li>
+                        <li><span>May 2021 - Oct 2022</span><br>Senior Java Full Stack Developer at Wabtec Corporation.</li>
+                        <li><span>July 2019 - Apr 2021</span><br>Full Stack Developer at Ciox Health.</li>
+                        <li><span>Dec 2017 - June 2019</span><br>Full Stack Developer at ALDI USA.</li>
+                        <li><span>June 2015 - Nov 2017</span><br>Full Stack Developer at Fortunesoft IT Innovations.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>Master's in Computer Science from University of Dayton. Dayton, OH.</li>
+                        <li>Bachelor's in Computer Science from JNTU, Hyderabad, India.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> tech.ajay0003@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> 5137605912</p>
+    
+                <a href="images/AjayMechineni.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+<script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
